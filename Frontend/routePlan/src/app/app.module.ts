@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { CalendarComponent } from './calendar/calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
