@@ -9,8 +9,15 @@ import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
 export class AppComponent {
   title = 'angular-google-map-app';
   calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth'
+    initialView: 'dayGridMonth',
+    events: [
+      { title: 'event 1', date: '2022-04-28' },
+      { title: 'event 2', date: '' }
+    ]
   };
+  handleDateClick(arg: { dateStr: string; }) {
+    alert('date click! ' + arg.dateStr)
+  }
   @ViewChild('myGoogleMap', { static: false })
   map!: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false })
