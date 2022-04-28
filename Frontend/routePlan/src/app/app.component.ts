@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { CalendarOptions } from '@fullcalendar/angular'; 
 import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
 })
 export class AppComponent {
   title = 'angular-google-map-app';
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth'
+  };
   @ViewChild('myGoogleMap', { static: false })
   map!: GoogleMap;
   @ViewChild(MapInfoWindow, { static: false })
