@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ManagerService } from './manager.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,17 +6,9 @@ import { ManagerService } from './manager.service';
 })
 export class AppComponent {
   title = 'routePlan';
-  msg:any;
-  constructor(private mService: ManagerService){
+ 
+  constructor(){
 
   }
-  ngOnInit():void{
-    this.showMessage();
-  }
-  showMessage(){
-    this.mService.getAllManager().subscribe(data=>{
-      this.msg = data,
-      console.log(this.msg);
-    })
-  }
+
 }
