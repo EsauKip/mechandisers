@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-homedetails',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homedetails.component.css']
 })
 export class HomedetailsComponent implements OnInit {
-
-  constructor() { }
+  title = "Manager";
+  constructor(private manager:CommonService)
+  { 
+  this.manager.getData().subscribe(data =>{
+    console.log(data)
+  })
+  }
 
   ngOnInit(): void {
   }

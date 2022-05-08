@@ -1,0 +1,16 @@
+.nav-item img {
+    height: 3rem;
+    width: 3.5rem;
+
+}
+
+nav {
+    background-color:rgba(0, 0, 80, .4);
+    color: white;
+    justify-content: space-around;
+}
+.btn {
+    background-color: black;
+    height: 2.5rem;
+    width: 5.5rem;
+}

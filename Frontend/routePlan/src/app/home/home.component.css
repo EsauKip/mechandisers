@@ -1,34 +1,32 @@
 .container-fluid{
-    /* background-image: url('/assets/background.jpeg'); */
+    background-image: url('/assets/backg.png');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
     height: 100vh;
-    color: white;
 
-}
-.nav-item img {
-    height: 3rem;
-    width: 3.5rem;
-
-}
-
-nav {
-    background-color:rgba(0, 0, 255, .4);
-    color: white;
-    justify-content: space-around;
-}
-.btn {
-    background-color: black;
-    height: 2.5rem;
-    width: 5.5rem;
 }
 .heading {
     padding: 2rem;
     font-size: 35px;
-    font-family: 'Oleo Script Swash Caps', cursive;
+    /* font-family: 'Oleo Script Swash Caps', cursive; */
+    margin-bottom: 3rem;
+    font-family: 'Tapestry', cursive;
     
 }
 span{
     display: block;
+}
+btn{
+    background-color: black;
+    width: 7rem;
+}
+.text {
+    margin-bottom: 4rem;
+    font-size: 25px;
+    font-family: 'Tapestry', cursive;
+}
+h2 {
+    font-family: 'Tapestry', cursive;
 }
