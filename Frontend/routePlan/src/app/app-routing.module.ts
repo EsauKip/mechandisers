@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomedetailsComponent } from './homedetails/homedetails.component';
 import { LoginmechComponent } from './loginmech/loginmech.component';
 import { RegistermechComponent } from './registermech/registermech.component';
-
+import { MechandiserComponent } from './mechandiser/mechandiser.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'homedetails', component: HomedetailsComponent},
   { path: 'loginmech', component: LoginmechComponent},
   { path: 'registermech', component: RegistermechComponent},
+  { path: 'mechandiser', component: MechandiserComponent}
 ];
 
 @NgModule({

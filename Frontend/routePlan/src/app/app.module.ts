@@ -12,7 +12,6 @@ import { HomedetailsComponent } from './homedetails/homedetails.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MerchandiserComponent } from './merchandiser/merchandiser.component';
 import { ManagerComponent } from './manager/manager.component';
 import { LoginmechComponent } from './loginmech/loginmech.component';
 import { RegistermechComponent } from './registermech/registermech.component';
@@ -26,7 +25,6 @@ import { MechandiserComponent } from './mechandiser/mechandiser.component';
     RegisterComponent,
     LoginComponent,
     NavbarComponent,
-    MerchandiserComponent,
     ManagerComponent,
     LoginmechComponent,
     RegistermechComponent,

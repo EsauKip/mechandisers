@@ -1,6 +1,6 @@
-import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { RegisterService } from './../register.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -8,23 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-register:any = FormGroup;
-  constructor(private fb:FormBuilder, private router:Router) { }
+  data:any
+  constructor(private managersignup:RegisterService) { 
+    this.managersignup.getManagerSign().subscribe(data =>{
+      console.log(data)
+      this.data = data;
+    })
+  }
 
   ngOnInit(): void {
-      this.register = this.fb.group({
-      name:['',Validators.required],
-      email:['',Validators.compose([Validators.required,Validators.email])],
-      password:['',Validators.required],
-      confirmpassword:['',Validators.required]
-    });
+      
   }
-registerSubmit(data:any){
-console.log(data);
-}
-getToLogin(){
-  this.router.navigate(['login'])
-}
-
 
 }
+

@@ -1,0 +1,9 @@
+.container-fluid{
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+.card {
+    background-color: black;
+    color: white;
+}

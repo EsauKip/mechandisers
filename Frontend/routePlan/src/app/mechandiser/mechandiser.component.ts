@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MechandiserService } from '../mechandiser.service';
 
 @Component({
   selector: 'app-mechandiser',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mechandiser.component.css']
 })
 export class MechandiserComponent implements OnInit {
-
-  constructor() { }
+  title = "Mechandiser";
+  data:any
+  constructor(private mechandiser:MechandiserService) {
+    this.mechandiser.getMechandiser().subscribe(data =>{
+      console.log(data)
+      this.data = data;
+    })
+  }
 
   ngOnInit(): void {
   }
