@@ -16,6 +16,11 @@ import { ManagerComponent } from './manager/manager.component';
 import { LoginmechComponent } from './loginmech/loginmech.component';
 import { RegistermechComponent } from './registermech/registermech.component';
 import { MechandiserComponent } from './mechandiser/mechandiser.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { FooterComponent } from './footer/footer.component';
+import { MechComponent } from './mech/mech.component';
+import { RoutesComponent } from './routes/routes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +33,12 @@ import { MechandiserComponent } from './mechandiser/mechandiser.component';
     ManagerComponent,
     LoginmechComponent,
     RegistermechComponent,
-    MechandiserComponent
+    MechandiserComponent,
+    AboutComponent,
+    ServiceComponent,
+    FooterComponent,
+    MechComponent,
+    RoutesComponent
   ],
   imports: [
     BrowserModule,

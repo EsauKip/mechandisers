@@ -1,0 +1,15 @@
+.container-fluid{
+    background-color: black;
+    color: white;
+}
+.heading{
+    padding: 3rem;
+}
+p{
+    font-size: 20px;
+}
+img {
+    height: 300px;
+    margin-bottom: 3rem;
+    width: 500px;
+}

@@ -1,15 +1,15 @@
 .container-fluid{
-    background-image: url('/assets/backg.png');
+    /* background-image: url('/assets/backg.png'); */
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    height: 100vh;
+    height: 137vh;
 
 }
 .heading {
     padding: 2rem;
-    font-size: 35px;
+    font-size: 50px;
     /* font-family: 'Oleo Script Swash Caps', cursive; */
     margin-bottom: 3rem;
     font-family: 'Tapestry', cursive;
@@ -18,9 +18,11 @@
 span{
     display: block;
 }
-btn{
-    background-color: black;
+.btn{
+    margin-top: 1rem;
+    background-color: white;
     width: 7rem;
+
 }
 .text {
     margin-bottom: 4rem;
@@ -29,4 +31,17 @@ btn{
 }
 h2 {
     font-family: 'Tapestry', cursive;
+}
+.col-md-5 img{
+    width: 28rem;
+    height: 20rem;
+}
+.footer {
+    margin-top: 4rem;
+}
+p {
+    margin-top: 3rem;
+}
+p span{
+    display: block;
 }

@@ -23,3 +23,6 @@ input.ng-invalid{
 input.ng-valid{
     border-left: solid green;
 }
+.footer {
+    margin-top: 4rem;
+}

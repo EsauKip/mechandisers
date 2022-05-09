@@ -11,7 +11,7 @@ export class MechandiserComponent implements OnInit {
   data:any
   constructor(private mechandiser:MechandiserService) {
     this.mechandiser.getMechandiser().subscribe(data =>{
-      console.log(data)
+      console.log(data);
       this.data = data;
     })
   }

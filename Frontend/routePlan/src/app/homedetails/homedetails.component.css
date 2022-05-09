@@ -1,6 +1,11 @@
 .container-fluid{
     background-color: black;
+    height: 170vh;
+    color: white;
 }
 .sub-heading {
     font-size: 20px;
+}
+.footer {
+    margin-top: 22rem;
 }

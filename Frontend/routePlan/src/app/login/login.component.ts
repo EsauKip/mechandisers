@@ -36,6 +36,6 @@ loginSubmit(data:any){
 
 }
 getToSignup(){
-    this.router.navigate(['register'])
+    this.router.navigate(['homedetails'])
 }
 }

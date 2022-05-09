@@ -9,8 +9,7 @@ nav {
     color: white;
     justify-content: space-around;
 }
-.btn {
-    background-color: black;
-    height: 2.5rem;
-    width: 5.5rem;
+
+.navbar-nav {
+    margin-left: 55rem;
 }

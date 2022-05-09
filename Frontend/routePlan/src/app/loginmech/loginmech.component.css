@@ -1,6 +1,6 @@
 .container-fluid {
     background-color: black;
-    height: 100vh;
+    height: 95vh;
     color: white;
 }
 .buts {
@@ -31,4 +31,7 @@ input.ng-valid{
 }
 .error {
     color: red;
+}
+.footer {
+    margin-top: 14rem;
 }

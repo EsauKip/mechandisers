@@ -1,3 +1,4 @@
+import { RoutesComponent } from './routes/routes.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +8,10 @@ import { HomedetailsComponent } from './homedetails/homedetails.component';
 import { LoginmechComponent } from './loginmech/loginmech.component';
 import { RegistermechComponent } from './registermech/registermech.component';
 import { MechandiserComponent } from './mechandiser/mechandiser.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { MechComponent } from './mech/mech.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -15,7 +20,12 @@ const routes: Routes = [
   { path: 'homedetails', component: HomedetailsComponent},
   { path: 'loginmech', component: LoginmechComponent},
   { path: 'registermech', component: RegistermechComponent},
-  { path: 'mechandiser', component: MechandiserComponent}
+  { path: 'mechandiser', component: MechandiserComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'service', component: ServiceComponent},
+  { path: 'mech', component: MechComponent},
+  { path: 'routes', component: RoutesComponent}
+
 ];
 
 @NgModule({
