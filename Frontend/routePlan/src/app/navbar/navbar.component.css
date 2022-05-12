@@ -1,0 +1,15 @@
+.nav-item img {
+    height: 3rem;
+    width: 3.5rem;
+
+}
+
+nav {
+    background-color:rgba(0, 0, 80, .4);
+    color: white;
+    justify-content: space-around;
+}
+
+.navbar-nav {
+    margin-left: 55rem;
+}
