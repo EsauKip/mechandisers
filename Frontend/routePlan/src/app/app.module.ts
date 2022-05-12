@@ -21,6 +21,7 @@ import { ServiceComponent } from './service/service.component';
 import { FooterComponent } from './footer/footer.component';
 import { MechComponent } from './mech/mech.component';
 import { RoutesComponent } from './routes/routes.component';
+import { DatePipe } from './date.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { RoutesComponent } from './routes/routes.component';
     ServiceComponent,
     FooterComponent,
     MechComponent,
-    RoutesComponent
+    RoutesComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,

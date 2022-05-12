@@ -1,3 +1,4 @@
+import { MapComponent } from './map/map.component';
 import { RoutesComponent } from './routes/routes.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'service', component: ServiceComponent},
   { path: 'mech', component: MechComponent},
-  { path: 'routes', component: RoutesComponent}
+  { path: 'routes', component: RoutesComponent},
+  { path: 'map', component: MapComponent}
 
 ];
 

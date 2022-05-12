@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonService } from '../common.service';
+import { Route } from './../route';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-homedetails',
@@ -7,13 +9,13 @@ import { CommonService } from '../common.service';
   styleUrls: ['./homedetails.component.css']
 })
 export class HomedetailsComponent implements OnInit {
-  title = "Manager";
-  constructor(private manager:CommonService)
-  { 
-  this.manager.getData().subscribe(data =>{
-    console.log(data)
-  })
+  newRoute = new Route (0,'', '','','',  new Date());
+  @Output() addRoute = new EventEmitter<Route>();
+
+  submitRoute(){
+    this.addRoute.emit(this.newRoute);
   }
+  constructor(){ }
 
   ngOnInit(): void {
   }

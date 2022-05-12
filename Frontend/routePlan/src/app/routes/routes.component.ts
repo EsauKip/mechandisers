@@ -1,6 +1,6 @@
+import { Route } from './../route';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { RoutesService } from '../routes.service';
+
 
 @Component({
   selector: 'app-routes',
@@ -8,13 +8,21 @@ import { RoutesService } from '../routes.service';
   styleUrls: ['./routes.component.css']
 })
 export class RoutesComponent implements OnInit {
-  data:any;
-  constructor(private routes:RoutesService) {
-    this.routes.getMechandiser().subscribe(data =>{
-      console.log(data);
-      this.data = data;
-    })
+  routes:Route[] = [
+    new Route (1, 'Cynthia','Nairobi','Kasarani','Githurai', new Date(2022,4,5)),
+    new Route (2, 'Melody','Kisumu','Kondele','Mlimani', new Date(2022,5,5)),
+    new Route (3, 'Vyonna','Nakuru','Gilgil','Bahati', new Date(2022,6,5)),
+    new Route (4, 'Faith','Mombasa','Miritini','Mikindani', new Date(2022,7,5)),
+  ];
+
+
+  addNewRoute(route:any){
+    let quoteLength = this.routes.length;
+    route.id = quoteLength+1;
+    route.quoteDate = new Date(route.quoteDate)
+    this.routes.push(route)
   }
+  constructor() {}
 
 
 
