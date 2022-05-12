@@ -1,7 +1,7 @@
-import { CommonService } from './../common.service';
-import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { FormGroup, FormBuilder} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -9,33 +9,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  login:any = FormGroup;
-  users:any = [];
-  constructor(private fb:FormBuilder, private router:Router, private commonserve:CommonService) { }
+  form!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {
+  }
 
   ngOnInit(): void {
-    this.login = this.fb.group({
-      name:['',Validators.required],
-      password:['',Validators.required]
+    this.form = this.formBuilder.group({
+      email: '',
+      password: ''
     });
-    this.commonserve.getData().subscribe((data:any)=>{
-      console.log(data);
-    })
-  }
-loginSubmit(data:any){
-  if (data.name){
-    this.users.forEach((item:any)=>{
-      if(item.name === data.name && item.password === data.password ){
-        console.log("User is valid");
-      }
-      else{
-        console.log("user is invalid");
-      }
-    })
   }
 
-}
-getToSignup(){
-    this.router.navigate(['homedetails'])
-}
+  submit(): void {
+    this.http.post('http://localhost:8000/api/login/', this.form.getRawValue(), {
+      withCredentials: true
+    }).subscribe(() => this.router.navigate(['']));
+  }
 }

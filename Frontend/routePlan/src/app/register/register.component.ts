@@ -1,6 +1,7 @@
-import { RegisterService } from './../register.service';
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -9,24 +10,25 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  data:any
-  postId:any
-  constructor(private managersignup:RegisterService, private http:HttpClient ) { 
-    
-    this.managersignup.getManagerSign().subscribe(data =>{
-      console.log(data)
-      this.data = data;
-    })
+  form!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {
   }
-  // onSubmit(data:any){
-  //   this.http.post("https://melo-route.herokuapp.com/api/signup/manager/", data)
-  //   .subscribe((result)=>{
-  //     console.warn("result",result)
-  //   })
-  //   console.warn(data)
-  // }
 
   ngOnInit(): void {
-  }
+    this.form = this.formBuilder.group({
+      name: '',
+      email: '',
+      password: ''
+    });
   }
 
+  submit(): void {
+    this.http.post('http://localhost:8000/api/register/', this.form.getRawValue())
+      .subscribe(() => this.router.navigate(['/login']));
+  }
+}
